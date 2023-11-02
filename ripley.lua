@@ -221,8 +221,9 @@ function play_poly_perc()
   for i=1,columnCount do
     for j=1,rowCount do
       if currentGrid[i][j] > 2 then
-        local freq = MusicUtil.note_num_to_freq(i*2 + params:get("root_note"))
-        engine.amp(currentGrid[i][j] / 32)
+        -- local freq = MusicUtil.note_num_to_freq(i*2 + params:get("root_note"))
+        local freq = MusicUtil.note_num_to_freq(notes[i])
+        -- engine.amp(currentGrid[i][j] / 32)
         engine.hz(freq) 
       end
     end
